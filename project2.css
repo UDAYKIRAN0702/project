@@ -113,7 +113,6 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Header Styles */
 header {
     background-color: white;
     padding: 15px 5%;
@@ -168,7 +167,6 @@ nav ul li a:hover {
     color: white;
 }
 
-/* Slider Styles */
 .slider-container {
     position: relative;
     width: 100%;
@@ -214,7 +212,6 @@ nav ul li a:hover {
     letter-spacing: 3px;
 }
 
-/* Navigation buttons */
 .slider-nav {
     position: absolute;
     top: 50%;
@@ -240,7 +237,6 @@ nav ul li a:hover {
     background: white;
 }
 
-/* Dots indicator */
 .dots {
     position: absolute;
     bottom: 20px;
