@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="project2.css">
+    <title>UBAT KOSAK</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Replace with your actual logo -->
+            <img src="https://png.pngtree.com/png-clipart/20190604/original/pngtree-corporate-image-logo-png-image_1026060.jpg" alt="UBAT KOSAK Logo">
+            <h1>UBAT KOSAK</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="C:\project\project2.html">Home</a></li>
+                <li><a href="C:\project\aboutus.html">About Us</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="C:\project\priceing.html">Pricing</a></li>
+                <li><a href="C:\project\contactus.html">Contact Us</a></li>
+                <li><a href="C:\Users\Jalaramaiah G\Videos\Captures\login.html" class="login-btn">Login</a></li>
+                <li><a href="file:///C:/Users/Jalaramaiah%20G/Videos/Captures/reg.html" class="login-btn">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        
+        
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://i2.wp.com/thenewcamera.com/wp-content/uploads/2016/01/Nikon-D500-Sample-Image-3.jpg" alt="Fashion 1">
+                   
+                </div>
+                <div class="slide">
+                    <img src="https://cdn.photographylife.com/wp-content/uploads/2017/09/Nikon-D850-Image-Samples-22.jpg" alt="Fashion 2">
+                    
+                </div>
+                <div class="slide">
+                    <img src="https://www.magezinepublishing.com/equipment/images/equipment/D850-6542/large/Nikon-D850-iso10000-DSC_0300_1503513309.jpg" alt="Fashion 2">
+                    
+                </div>
+
+                <div class="slide">
+                    <img src="https://4.bp.blogspot.com/--vODCYVd63g/VBgQ_eUqduI/AAAAAAAAQ2I/rgWsGIdDoRk/s1600/Canon%2BEOS%2B7D%2BMark%2BII%2BSample%2BJPEG%2BImage%2B04.jpg" alt="Fashion 2">
+                    
+                </div>
+                
+                    
+                    
+                
+            
+            <div class="slider-nav">
+                <button class="prev-btn">❮</button>
+                <button class="next-btn">❯</button>
+            </div>
+            
+            <div class="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="container" col-md-4>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+        </div>
+    
+        <script>
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const dots = document.querySelectorAll('.dot');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+            let autoSlideInterval;
+            
+            // Set up slider
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Next slide
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateSlider();
+                resetAutoSlide();
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateSlider();
+                resetAutoSlide();
+            }
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlider();
+                    resetAutoSlide();
+                });
+            });
+            
+            // Auto slide
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000);
+            }
+            
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                startAutoSlide();
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Start auto sliding
+            startAutoSlide();
+            
+            // Pause on hover
+            const sliderContainer = document.querySelector('.slider-container');
+            sliderContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+            
+            sliderContainer.addEventListener('mouseleave', () => {
+                startAutoSlide();
+            });
+
+           
+    
+    
+        </script>
+    </body>
+    </div>
+  
+
+    <div class="page-title">
+        <h2>About Us</h2>
+    </div>
+    <div>
+        <p style="padding: 8% 15%; font-size: large;">At TSAR IT Pvt. Ltd., we specialize in delivering cutting-edge billing software solutions tailored to meet the diverse needs of businesses across various industries. Our billing software is designed to simplify and automate the entire billing process — from invoice generation and GST calculations to real-time reporting and inventory tracking.
+
+            With a focus on accuracy, speed, and compliance, TSAR IT Billing Software helps businesses reduce manual effort, avoid errors, and ensure seamless financial operations. Whether you're a retail store, supermarket, or service provider, our software is built to adapt to your workflow and scale with your growth.
+            
+            Backed by a dedicated team of developers and support professionals, we are committed to providing reliable, user-friendly, and secure billing systems that empower businesses to focus more on growth and less on paperwork.
+            
+            TSAR IT — Empowering Businesses with Smart Billing Solutions.</p>
+    </div>
+    <div class="page-title">
+        <h2>Our Pricing Plans</h2>
+    </div>
+   
+</head>
+<body>
+
+
+<div class="plan-container">
+    <div class="plan">
+        <h2>Primary Hospital</h2>
+        <h3>35</h3>
+        <div class="per-patient">20.00/patient</div>
+        <p>We will charge</p>
+        
+        <h4>Features</h4>
+        <ul class="features">
+            <li>Single Dashboard</li>
+            <li>Doctor Management</li>
+            <li>Accounts Management</li>
+            <a href="file:///C:/Users/Jalaramaiah%20G/Videos/Captures/reg.html"><button type="button" class="btn btn-primary">Register9999977</button></a>
+             
+        </ul>
+    </div>
+    
+    <div class="plan plan-highlight">
+        <h2>Multi-Hospital</h2>
+        <h3>50</h3>
+        <div class="per-patient">120.00/patient</div>
+        <p>We will charge</p>
+        
+        <h4>Features</h4>
+        <ul class="features">
+            <li>Up to 10 Doctor Logins</li>
+            <li>Doctors Dashboard</li>
+            <li>Staff Dashboard</li>
+            <li>Master Dashboard</li>
+            <button type="button" class="btn btn-primary">Demo</button>
+        </ul>
+    </div>
+    
+    <div class="plan">
+        <h2>Corporate Hospital</h2>
+        <h4>Features</h4>
+        <ul class="features">
+            <li>Unlimited Dashboards</li>
+            <li>Unlimited Branches</li>
+            <li>For more information, please connect with us</li>
+            <a href="C:\project\contactus.html"><button type="button" class="btn btn-primary">Contact Us</button></a>
+        </ul>
+    </div>
+</div>
+ 
+<div class="contact-container22" >
+    <h1>Get in Touch</h1>
+    
+    <form>
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+</div>
+<br>
+<br>
+<div>
+    <form>
+        
+        
+        <div class="form-group container">
+            <p style="text-align: center; font-size: 280%;"><b>Subscribe To Get The Latest<br> 
+                News About Us</b></p>
+        <p style="text-align: center;"> Get The Latest About HMS To Your Pocket Drop <br>
+            Your Email Below To Get Daily Updates About Us</p>
+            <div class="flex">
+            
+            <label for="email"></label>
+            <input type="email" id="emails" placeholder="Enter Your Email Address" name="emails">
+        
+        
+            <button type="button" class="btn btn-success">Subscribe</button>
+        
+           
+    </div>
+        
+        
+        
+        
+    </form>
+</div>
+</p>
+
+
+</body>
+<footer>
+    <li class="logo" style="padding-left: 50%;"><img src="https://png.pngtree.com/png-clipart/20190604/original/pngtree-corporate-image-logo-png-image_1026060.jpg"></li>
+
+    <div class="footer-content">
+        <ul class="flexx">
+            
+           
+            <li><a href="C:\project\aboutus.html">About Us</a> </li>
+            <li><a href="C:\project\priceing.html">Services</a>
+            </li>
+<li><a href="C:\project\contactus.html">Contact Us</a></li>
+<li>
+<a href="">Privacy Policy</a>
+</li>
+        </ul>
+        <p>© 2025 Hospital Management Software. All rights reserved.</p>
+    </div>
+</footer>
+</html>
